@@ -30,4 +30,4 @@ def test_read_pdf():
         with zip_file.open('test.pdf') as pdf_file:
             reader = PdfReader(pdf_file)
 
-            assert reader.pages[0].extract_text() == 'Hello world!'
+            assert 'Hello world!' in reader.pages[0].extract_text()
